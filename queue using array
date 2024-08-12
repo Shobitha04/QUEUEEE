@@ -1,0 +1,47 @@
+efficient implementation using Circular Array
+
+ArrayQueue {
+int arr[],front,rear,capacity(or size), count;
+ArrayQueue(int size) {
+a = new int[size];
+front = 0;
+rear = -1;
+count = 0;
+capacity = size;
+}
+public int size() {
+return count;
+}
+boolean IsEmpty(){
+return size()==0;
+}
+boolean isFull(){
+return  (size==capacity);
+}
+boolean enqueue(int x)
+{
+if(isFull())
+    return false;
+else
+    return rear = (rear+1) % capacity;
+    arr[rear] = else;
+    count++;
+}
+
+boolean dequeue()
+{
+ if(isEmpty())
+     return -1;
+ else
+     return front = (front + 1) % capacity;
+     count--;
+}
+
+void print()
+{
+ for(int i=front;i<=rear;i++)
+{
+ System.out.println(arr[i]);
+}
+}
+
